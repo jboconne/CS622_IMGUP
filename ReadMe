@@ -1,0 +1,12 @@
+Jeffrey B. O'Connell
+CS 622 Advanced Programming Techniques
+Assignment 1 - ImageUploader - Abstract Class, Inheritance, Downcasting/Upcasting and Polymorphism
+January 23, 2021
+
+Design: https://docs.google.com/spreadsheets/d/1vBmDVtWWh3EX0oehFFLRU0P6eR-fn4d0qVg1-XOUooM/edit?usp=sharing
+(as cited in Example for CS 622 Assignment 1)
+
+Run (non-JUnit) test from categories_test/CategoryDisplayExample 
+(there are no JUnit tests because the functionality is mainly display so far).
+
+Pedagogical Notes in: class Category and CategoryDisplayExample.displayCategoryHierarchyExample()
