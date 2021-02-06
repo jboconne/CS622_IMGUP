@@ -1,0 +1,12 @@
+Jeffrey B. O'Connell
+CS 622 Advanced Programming Techniques
+Assignment 2 - ImageUploader - Exception Handling and File I/O
+February 3, 2021
+
+Design: https://docs.google.com/spreadsheets/d/1vBmDVtWWh3EX0oehFFLRU0P6eR-fn4d0qVg1-XOUooM/edit?usp=sharing
+(as cited in Example for CS 622 Assignment 2)
+
+Run program from category_IO_test/Menu() class  
+Run JUnit tests from category_IO_test/MenuTest() class
+
+Pedagogical Notes in: class Menu and category_IO_test.Menu()
