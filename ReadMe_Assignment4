@@ -1,0 +1,17 @@
+Jeffrey B. O'Connell
+CS 622 Advanced Programming Techniques
+Assignment 4 - ImageUploader - Binary I/O, Java FX, Lambdas & Streams
+February 17, 2021
+
+Design: https://docs.google.com/spreadsheets/d/1vBmDVtWWh3EX0oehFFLRU0P6eR-fn4d0qVg1-XOUooM/edit?usp=sharing
+(as cited in Example for CS 622 Assignment 4)
+
+Run program from imageUpload_test/ImageUploaderGuiTest() class
+	1) Select "Client Portfolio" option from Category ComboBox
+	2) Select any option from Sub Category ComboBox (Note that the sub category options are sorted in alphabetical order)
+	3) Click "Browse" button to Open the JFileChooser dialog box and select the image to match the selected category hierarchy (filtered by .jpg or .png)
+	4) Click "Upload Image" button to simulate uploading the image to the web server.
+  
+Run JUnit test from imageUpload_test/ImageFormatValidatorTest() class
+
+Pedagogical Notes in: classes UploaderFileToServer(), ImageUploaderGui(), MainFrame(), FormPanel(), TextPanel() and FormEvent()

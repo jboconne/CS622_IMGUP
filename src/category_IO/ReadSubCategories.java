@@ -1,6 +1,9 @@
 package category_IO;
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner; // Import the Scanner class to read text files
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -24,6 +27,34 @@ public class ReadSubCategories {
 	         System.out.println(e.getMessage());
 	      }
 	   }
+	 
+	 public static int stringCompare(String str1, String str2) 
+	    { 
+	  
+	        int l1 = str1.length(); 
+	        int l2 = str2.length(); 
+	        int lmin = Math.min(l1, l2); 
+	  
+	        for (int i = 0; i < lmin; i++) { 
+	            int str1_ch = (int)str1.charAt(i); 
+	            int str2_ch = (int)str2.charAt(i); 
+	  
+	            if (str1_ch != str2_ch) { 
+	                return str1_ch - str2_ch; 
+	            } 
+	        } 
+	  
+	        
+	        if (l1 != l2) { 
+	            return l1 - l2; 
+	        } 
+	  
+	        // If none of the above conditions is true, 
+	        // it implies both the strings are equal 
+	        else { 
+	            return 0; 
+	        } 
+	    } 
 
 	   //reading a file using buffered reader line by line
 	   public static void readUsingBufferedReader(String topLevelCat) throws IOException {	      
@@ -52,6 +83,14 @@ public class ReadSubCategories {
 		        			// Create string array to split each line using ";" delimiter. 
 		        			// Right side of topCat array with each sub category
 		        			String[] subCats = topCat[1].trim().split(";");
+		        			Arrays.sort(subCats, (firstSubCategory, secondSubCategory) -> 
+		                     {  
+		                        return stringCompare(firstSubCategory, secondSubCategory);
+		                     });
+		        			
+		        			
+		        			
+		        			
 		        			// loop through the string array of sub categories, and print out
 		        			// the value indented from the top level category 
 		        			for (int i=0; i<subCats.length; i++) {
@@ -72,6 +111,14 @@ public class ReadSubCategories {
 	        		System.out.println(topCat[0]);
 	        		if(topCat.length >= 2) {
 	        			String[] subCats = topCat[1].trim().split(";");
+	        			//Arrays.sort(subCats);
+	        			
+	        			Arrays.sort(subCats, (firstSubCategory, secondSubCategory) -> 
+	        			{  //System.out.print("comparing :"+ firstSubCategory + " and " + secondSubCategory);
+	                        return stringCompare(firstSubCategory, secondSubCategory);
+	                     });
+	        			
+	        			
 	        			for (int i=0; i<subCats.length; i++) {
 	        		        System.out.println("\t" + subCats[i]);
 	        			}
