@@ -1,7 +1,5 @@
-package imageUpload;
+package multipleImageUploads;
 import javax.swing.SwingUtilities;
-
-import multipleImageUploads.MainFrame2;
 
 public class ImageUploaderGui  {
 	/* This is the class that gets called to run the MainFrame() class of the ImageUploader application

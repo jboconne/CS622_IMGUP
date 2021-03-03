@@ -1,4 +1,4 @@
-package imageUpload_test;
+package multipleImageUploads_test;
 /* 
    JUnit Test File to Validate Image File Types Accepted 
    works with ImageFormatValidator() class 

@@ -1,8 +1,16 @@
-package imageUpload;
-import java.io.*;
-import java.awt.image.*;
-import javax.imageio.*; 
-import javax.swing.*;
+package multipleImageUploadsDBGui;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /* Here’s where we read the binary image file in from filePath storing it in a buffered image using a 
 	ByteArrayOutPutStream that gets written to the byte array called bytes */
@@ -17,10 +25,16 @@ public class UploaderFileToServer {
 		// P3 - ByteArrayOutputStream gets written to BufferedImage as jpg
 		// P4 - ByteArrayOutputStream gets assigned to  byte array called bytes
 		// P5 - Byte[] bytes gets assigned to ImageIcon of JFrame object 
-	public static void main(String filePath, String Category, String SubCategory) throws Exception{ //Pre1
+	public static void main(String filePath,  String Category, String SubCategory) throws Exception{ //Pre1
 	     
-		  System.out.println("File Path: " + filePath);  
 		
+		  String s = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS").format(LocalDateTime.now());   
+		  
+		  // create object of Path 
+	      Path path = Paths.get(filePath); 
+	  
+	      // call getFileName() and get FileName path object 
+	      Path fileName = path.getFileName(); 
 		  BufferedImage img = null;
 		  
 	      img = ImageIO.read(new File(filePath)); //P1
@@ -53,8 +67,12 @@ public class UploaderFileToServer {
 	 			*/
 	      
 	      int len2 = bytes.length;
+	      System.out.println("");
+	      System.out.println("File Name: " + fileName);
+	      System.out.println("File Path: " + filePath);
 	      System.out.println("Size of bytes: " + len2);	      
-	      System.out.println("Image Size: " + len2/1024 + "KB");
+	      System.out.println("Image Size: " + len2/1024 + "KB");	     
+	      System.out.println("TimeDate/Time Saved: " +s);
 	      
 	      // Here's where I just assigned the Byte[] bytes to the ImageIcon of the JFrame 
 	      // This will simulate the image being uploaded to the web server with a preview of the image showing in the right panel of 

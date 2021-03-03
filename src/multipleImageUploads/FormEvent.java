@@ -1,6 +1,9 @@
-package imageUpload;
+package multipleImageUploads;
 
 import java.util.EventObject;
+import java.util.HashMap;
+import java.util.Map;
+
 
 /* This is the formEvent() class that gets called by the formPanel() and MainFrame() classes */
 
@@ -10,22 +13,21 @@ public class FormEvent extends EventObject {
 	
 	private String category;
 	private String subCategory;
-	private String filePath;
-	private String imageFileName;
-	
+	private HashMap imagePaths;
+
 	public FormEvent(Object source) {
 		super(source);
 	}
 	/*  
 	 	FormEvent constructor with parameters - This gets passed into the UploadedFileToServer classes which uploads 
-	 	the selected image and category hierarchy to the web server
-	*/ 
-	public FormEvent(Object source, String category, String subCategory, String filePath, String imageFileName) {
+	 	the selected images using myImageUploads HashMap and category hierarchy to the web server
+	*/
+	
+		public FormEvent(Object source, String category, String subCategory, HashMap<String, String> myImageUploads  ) { 
 		super(source);
 		this.category = category;
 		this.subCategory = subCategory;
-		this.filePath = filePath;
-		this.imageFileName = imageFileName;
+		this.imagePaths = myImageUploads;		
 	}
 	
 	/* Getters and Setters for FormEvents */ 
@@ -46,24 +48,11 @@ public class FormEvent extends EventObject {
 		this.subCategory = subCategory;
 	}
 	
-	public String getFilePath() {
-		return filePath;
+	public HashMap<String, String> getHashMap() {
+		return imagePaths;
 	}
 
-	public void setFilePath(String filePath) {
-		this.filePath = filePath;
+	public void setHashMap(HashMap<String, String> myImageUploads) {
+		this.imagePaths = myImageUploads;
 	}
-
-	public String getImageFileName() {
-		return imageFileName;
-	}
-
-	public void setIamgeFileName(String imageFileName) {
-		this.imageFileName = imageFileName;
-	}
-	
-	
-	
-	
-	
 }

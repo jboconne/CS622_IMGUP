@@ -1,0 +1,18 @@
+Jeffrey B. O'Connell
+CS 622 Advanced Programming Techniques
+Assignment 6 - ImageUploader - Concurrency
+March 3, 2021 
+
+Design: https://drive.google.com/file/d/1fsly2la0ezdljRx8KdWhhzqxirHBwqiB/view?usp=sharing
+(as cited in Example for CS 622 Assignment 5)
+
+Run program from multipleImageUploadsDBModel folder
+	1) Run CreateImageUploaderTables to create 3 tables
+	2) 
+	3) Click the first "Browse" button to Open the JFileChooser dialog box and select the image to match the selected category hierarchy (filtered by .jpg or .png)
+	4) Continue to click additional "Browse" buttons following the previously clicked row to upload multiple imagesat the same time
+	5) Click "Upload Image" button to simulate uploading the image(s) to the web server.
+  
+Run JUnit test from multipleimagesUploads_test/ImageFormatValidatorTest() class
+
+Pedagogical Notes in: classes UploaderFileToServer(), ImageUploaderGui(), MainFrame(), FormPanel(), TextPanel() and FormEvent()

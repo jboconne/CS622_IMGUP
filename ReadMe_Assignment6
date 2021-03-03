@@ -1,0 +1,17 @@
+Jeffrey B. O'Connell
+CS 622 Advanced Programming Techniques
+Assignment 6 - ImageUploader - Java Database Connectivity
+March 3, 2021 
+
+Design: https://drive.google.com/file/d/1fsly2la0ezdljRx8KdWhhzqxirHBwqiB/view?usp=sharing
+(as cited in Example for CS 622 Assignment 6)
+
+Run classes from multipleImageUploadsDBModel folder
+	1) Run CreateImageUploaderTables.java class to create 3 tables
+	2) Run InsertCategories.java class to seed the Category table with data 
+	3) Run InsertSubCategories.java class to seed the SubCategory table with data
+	4) Run InsertImages.java class to seed the Images table with data
+	5) Run GetCategoriesAndSubCategories.java class to see a hierarchical listing of the top level categories and their respective subcategories
+	6) Run GetImageCountByCategory.java class to display an aggregate list of Categories and the number of images in each 
+  
+Run JUnit test from multipleImageUploadsDBModel_Test/ImageFormatValidatorTest() class
